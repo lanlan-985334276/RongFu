@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">RongFu</string>
+    <string name="app_name">RF</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="input_username">请输入邮箱或手机号</string>
+    <string name="username">用户名</string>
+    <string name="input_password">请输入密码</string>
+    <string name="password">密码</string>
+
+    <string name="add">提交</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+
+    <string name="home">首页</string>
+    <string name="user">个人中心</string>
+    <string name="gfhb">休闲娱乐</string>
+
+    <string name="log">日志管理</string>
+    <string name="today_log">今日日志</string>
 </resources>
