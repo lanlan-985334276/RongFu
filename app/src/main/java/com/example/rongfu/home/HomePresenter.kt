@@ -1,6 +1,6 @@
-package com.example.rongfu.main
+package com.example.rongfu.home
 
-class MainPresenter(private val pageView: MainContract.View) : MainContract.Presenter {
+class HomePresenter(private val pageView: HomeContract.View) : HomeContract.Presenter {
 
     init {
         pageView.setPresenter(this)

@@ -1,15 +1,20 @@
 <resources>
-    <string name="app_name">RF</string>
+    <string name="app_name">荣福</string>
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="input_username">请输入邮箱或手机号</string>
+    <string name="input_service_url">请输入服务器地址</string>
+    <string name="input_enterprise_name">请输入企业名</string>
     <string name="username">用户名</string>
     <string name="input_password">请输入密码</string>
+    <string name="input_password_again">请再次输入密码</string>
     <string name="password">密码</string>
 
     <string name="add">提交</string>
     <string name="delete">删除</string>
     <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="enter">确定</string>
 
     <string name="home">首页</string>
     <string name="user">个人中心</string>
@@ -17,4 +22,17 @@
 
     <string name="log">日志管理</string>
     <string name="today_log">今日日志</string>
+
+
+    <string name="send_code">发送验证码</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="username_password_login">账号密码登录</string>
+    <string name="username_code_login">验证码登录</string>
+    <string name="setting">设置</string>
+    <string name="next">下一步</string>
+    <string name="enterprise">企业</string>
+    <string name="staff">员工</string>
+    <string name="other">其他</string>
+    <string name="sign_in">签到</string>
 </resources>

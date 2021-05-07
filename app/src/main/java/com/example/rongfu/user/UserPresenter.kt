@@ -1,6 +1,6 @@
-package com.example.rongfu.main
+package com.example.rongfu.user
 
-class MainPresenter(private val pageView: MainContract.View) : MainContract.Presenter {
+class UserPresenter(private val pageView: UserContract.View) : UserContract.Presenter {
 
     init {
         pageView.setPresenter(this)

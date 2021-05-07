@@ -9,5 +9,6 @@ class LoginPresenter(private val pageView: LoginContract.View) :
 
     override fun start() {
         pageView.initView()
+        pageView.initLogic()
     }
 }
