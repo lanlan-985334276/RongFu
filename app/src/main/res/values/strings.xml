@@ -35,4 +35,6 @@
     <string name="staff">员工</string>
     <string name="other">其他</string>
     <string name="sign_in">签到</string>
+
+    <string name="network_status">网络异常</string>
 </resources>

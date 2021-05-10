@@ -8,10 +8,7 @@ import com.example.rongfu.R
 import com.example.rongfu.base.page.BaseActivity
 import com.example.rongfu.bean.JsonBean
 import com.example.rongfu.bean.User
-import com.example.rongfu.utils.GsonUtils
-import com.example.rongfu.utils.OkHttpUtils
-import com.example.rongfu.utils.SharedPrefsUtils
-import com.example.rongfu.utils.ToastUtils
+import com.example.rongfu.utils.*
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_register.*
 import okhttp3.Call
@@ -60,7 +57,8 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
             }.start()
             Log.i(TAG, SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode")
             OkHttpUtils.postEnqueue(
-                SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode?userName=${user.userName}",
+                SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode",
+                GsonUtils.gson2Json(user),
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
@@ -68,13 +66,17 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         }
                     }
 
-                    override fun success(call: Call, response: Response) {
+                    override fun success(call: Call, json: String) {
                         runOnUiThread {
-                            ToastUtils.showShort("发送验证码成功！")
+                            if (GsonUtils.json2Gson(json,
+                                    object : TypeToken<JsonBean<User>>() {}).state == 1000)
+                                ToastUtils.showShort("发送验证码成功！")
+                            else ToastUtils.showShort("发送验证码失败！")
                         }
                     }
                 }
             )
+
         }
         tv_cancel.setOnClickListener {
             finish()
@@ -107,7 +109,8 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         return@setOnClickListener
                     }
                     user.password = password
-                    OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/equalsCode?userName=$userName&code=$code",
+                    OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/equalsCode",
+                        GsonUtils.gson2Json(user),
                         object : OkHttpUtils.OkHttpCallback {
                             override fun failed(call: Call, e: IOException) {
                                 runOnUiThread {
@@ -115,10 +118,9 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                                 }
                             }
 
-                            override fun success(call: Call, response: Response) {
-                                val json = response.body!!.string()
+                            override fun success(call: Call, json: String) {
                                 runOnUiThread {
-                                    val jsonBean = GsonUtils.gsonFromJson(json,
+                                    val jsonBean = GsonUtils.json2Gson(json,
                                         object : TypeToken<JsonBean<User>>() {})
                                     if (jsonBean.state == 1000) {
                                         ll_input_view.visibility = View.GONE
@@ -141,7 +143,8 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         return@setOnClickListener
                     }
                     user.epName = epName
-                    OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/regEp?userName=${user.userName}&code=${user.code}&password=${user.password}&epName=${user.epName}",
+                    OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/regEp",
+                        GsonUtils.gson2Json(user),
                         object : OkHttpUtils.OkHttpCallback {
                             override fun failed(call: Call, e: IOException) {
                                 runOnUiThread {
@@ -149,10 +152,9 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                                 }
                             }
 
-                            override fun success(call: Call, response: Response) {
-                                val json = response.body!!.string()
+                            override fun success(call: Call, json: String) {
                                 runOnUiThread {
-                                    val jsonBean = GsonUtils.gsonFromJson(json,
+                                    val jsonBean = GsonUtils.json2Gson(json,
                                         object : TypeToken<JsonBean<User>>() {})
                                     if (jsonBean.state == 1000) {
                                         ToastUtils.showShort("注册成功！")
@@ -170,7 +172,8 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
             et_enterprise.visibility = View.VISIBLE
         }
         fl_became_other.setOnClickListener {
-            OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/regOther?userName=${user.userName}&code=${user.code}&password=${user.password}&epName=${user.epName}",
+            OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/regOther",
+                GsonUtils.gson2Json(user),
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
@@ -178,10 +181,9 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         }
                     }
 
-                    override fun success(call: Call, response: Response) {
-                        val json = response.body!!.string()
+                    override fun success(call: Call, json: String) {
                         runOnUiThread {
-                            val jsonBean = GsonUtils.gsonFromJson(json,
+                            val jsonBean = GsonUtils.json2Gson(json,
                                 object : TypeToken<JsonBean<User>>() {})
                             if (jsonBean.state == 1000) {
                                 ToastUtils.showShort("注册成功！")
