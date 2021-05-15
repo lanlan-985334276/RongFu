@@ -15,6 +15,7 @@ import com.example.rongfu.R
 import com.example.rongfu.base.page.BaseActivity
 import com.example.rongfu.bean.JsonBean
 import com.example.rongfu.bean.User
+import com.example.rongfu.dialog.MyDialogFragment
 import com.example.rongfu.main.MainActivity
 import com.example.rongfu.register.RegisterActivity
 import com.example.rongfu.service_url.ServiceUrlActivity
@@ -48,6 +49,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
 
     @SuppressLint("SetTextI18n")
     override fun initLogic() {
+        val dialog=MyDialogFragment()
         tv_use_password.setOnClickListener {
             if (ll_send_code.visibility == View.VISIBLE) {
                 et_code.setText("")
@@ -65,36 +67,39 @@ class LoginActivity : BaseActivity(), LoginContract.View {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
         btn_send_code.setOnClickListener {
+            dialog.show(supportFragmentManager)
             val user = User()
             user.userName = et_username.text.toString()
             if (user.userName.isNullOrEmpty()) {
                 ToastUtils.showShort("用户名不能为空！")
                 return@setOnClickListener
             }
-            btn_send_code.isClickable = false
-            //倒计时
-            object : CountDownTimer(60 * 1000, 1000) {
-                override fun onFinish() {
-                    btn_send_code.isClickable = true
-                    btn_send_code.setText(R.string.send_code)
-                }
-
-                override fun onTick(millisUntilFinished: Long) {
-                    btn_send_code.setText("${millisUntilFinished / 1000}s")
-                }
-            }.start()
             Log.i(TAG, SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode")
             OkHttpUtils.postEnqueue(
                 SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode", GsonUtils.gson2Json(user),
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
+                            dialog.dismiss()
                             ToastUtils.showShort("发送验证码失败！")
                         }
                     }
 
                     override fun success(call: Call, json: String) {
                         runOnUiThread {
+                            dialog.dismiss()
+                            btn_send_code.isClickable = false
+                            //倒计时
+                            object : CountDownTimer(60 * 1000, 1000) {
+                                override fun onFinish() {
+                                    btn_send_code.isClickable = true
+                                    btn_send_code.setText(R.string.send_code)
+                                }
+
+                                override fun onTick(millisUntilFinished: Long) {
+                                    btn_send_code.setText("${millisUntilFinished / 1000}s")
+                                }
+                            }.start()
                             ToastUtils.showShort("发送验证码成功！")
                         }
                     }
@@ -102,6 +107,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
             )
         }
         tv_login.setOnClickListener {
+            dialog.show(supportFragmentManager)
             var user = User()
             user.userName = et_username.text.toString()
             user.code = et_code.text.toString()
@@ -127,6 +133,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
+                            dialog.dismiss()
                             ToastUtils.showShort("登录失败，请重试")
                         }
                     }
@@ -134,6 +141,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
                     override fun success(call: Call, json: String) {
                         Log.i(TAG, Thread.currentThread().name)
                         runOnUiThread {
+                            dialog.dismiss()
                             Log.i(TAG, Thread.currentThread().name)
                             Log.i(TAG, json)
                             val jsonBean = GsonUtils.json2Gson(json,

@@ -9,14 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rongfu.R
 import com.example.rongfu.bean.StepBean
 
-class StepAdpter(val context: Context, val list: List<StepBean>) :
-    RecyclerView.Adapter<StepAdpter.ViewHolder>() {
+class StepAdapter(val context: Context, val list: MutableList<StepBean>) :
+    RecyclerView.Adapter<StepAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(context).inflate(R.layout.item_step, parent, false)
         )
     }
-
+    fun setData(list: List<StepBean>){
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
     override fun getItemCount(): Int {
         return list.size
     }

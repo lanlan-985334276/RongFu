@@ -9,26 +9,21 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rongfu.R
-import com.example.rongfu.bean.JsonBean
 import com.example.rongfu.bean.Plan
-import com.example.rongfu.bean.StepBean
-import com.example.rongfu.utils.GsonUtils
-import com.example.rongfu.utils.OkHttpUtils
-import com.example.rongfu.utils.SharedPrefsUtils
-import com.example.rongfu.utils.ToastUtils
-import com.google.gson.reflect.TypeToken
-import okhttp3.Call
-import java.io.IOException
 
-class PlanAdpter(val context: Context, val list: List<Plan>) :
-    RecyclerView.Adapter<PlanAdpter.ViewHolder>() {
+class PlanAdapter(private val context: Context,private val list: MutableList<Plan>) :
+    RecyclerView.Adapter<PlanAdapter.ViewHolder>() {
 
     private var listener: OnClickListener? = null
 
     fun setListner(listener: OnClickListener) {
         this.listener = listener
     }
-
+    fun setData(list:List<Plan>){
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(context).inflate(R.layout.item_plan, parent, false)

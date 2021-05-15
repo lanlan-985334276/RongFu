@@ -8,6 +8,7 @@ import com.example.rongfu.R
 import com.example.rongfu.base.page.BaseActivity
 import com.example.rongfu.bean.JsonBean
 import com.example.rongfu.bean.User
+import com.example.rongfu.dialog.MyDialogFragment
 import com.example.rongfu.utils.*
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_register.*
@@ -36,25 +37,15 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
     }
 
     override fun initLogic() {
+        val dialog=MyDialogFragment()
         btn_send_code.setOnClickListener {
+            dialog.show(supportFragmentManager)
             val user = User()
             user.userName = et_username.text.toString()
             if (user.userName.isNullOrEmpty()) {
                 ToastUtils.showShort("用户名不能为空！")
                 return@setOnClickListener
             }
-            btn_send_code.isClickable = false
-            //倒计时
-            object : CountDownTimer(60 * 1000, 1000) {
-                override fun onFinish() {
-                    btn_send_code.isClickable = true
-                    btn_send_code.setText(R.string.send_code)
-                }
-
-                override fun onTick(millisUntilFinished: Long) {
-                    btn_send_code.setText("${millisUntilFinished / 1000}s")
-                }
-            }.start()
             Log.i(TAG, SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode")
             OkHttpUtils.postEnqueue(
                 SharedPrefsUtils.getServiceUrl(this) + "/users/sendCode",
@@ -62,12 +53,26 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
+                            dialog.dismiss()
                             ToastUtils.showShort("发送验证码失败！")
                         }
                     }
 
                     override fun success(call: Call, json: String) {
                         runOnUiThread {
+                            dialog.dismiss()
+                            btn_send_code.isClickable = false
+                            //倒计时
+                            object : CountDownTimer(60 * 1000, 1000) {
+                                override fun onFinish() {
+                                    btn_send_code.isClickable = true
+                                    btn_send_code.setText(R.string.send_code)
+                                }
+
+                                override fun onTick(millisUntilFinished: Long) {
+                                    btn_send_code.setText("${millisUntilFinished / 1000}s")
+                                }
+                            }.start()
                             if (GsonUtils.json2Gson(json,
                                     object : TypeToken<JsonBean<User>>() {}).state == 1000)
                                 ToastUtils.showShort("发送验证码成功！")
@@ -85,6 +90,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
         tv_next.setOnClickListener {
             when {
                 ll_input_view.visibility == View.VISIBLE -> {
+                    dialog.show(supportFragmentManager)
                     val userName = et_username.text.toString()
                     if (userName.isNullOrEmpty()) {
                         ToastUtils.showShort("用户名不能为空！")
@@ -114,12 +120,14 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         object : OkHttpUtils.OkHttpCallback {
                             override fun failed(call: Call, e: IOException) {
                                 runOnUiThread {
+                                    dialog.dismiss()
                                     ToastUtils.showShort("请稍后重试!")
                                 }
                             }
 
                             override fun success(call: Call, json: String) {
                                 runOnUiThread {
+                                    dialog.dismiss()
                                     val jsonBean = GsonUtils.json2Gson(json,
                                         object : TypeToken<JsonBean<User>>() {})
                                     if (jsonBean.state == 1000) {
@@ -137,6 +145,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                     ll_is_next.visibility = View.VISIBLE
                 }
                 et_enterprise.visibility == View.VISIBLE -> {
+                    dialog.show(supportFragmentManager)
                     val epName = et_enterprise.text.toString()
                     if (epName.isNullOrEmpty()) {
                         ToastUtils.showShort("企业名不能为空！")
@@ -148,12 +157,14 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
                         object : OkHttpUtils.OkHttpCallback {
                             override fun failed(call: Call, e: IOException) {
                                 runOnUiThread {
+                                    dialog.dismiss()
                                     ToastUtils.showShort("请稍后重试!")
                                 }
                             }
 
                             override fun success(call: Call, json: String) {
                                 runOnUiThread {
+                                    dialog.dismiss()
                                     val jsonBean = GsonUtils.json2Gson(json,
                                         object : TypeToken<JsonBean<User>>() {})
                                     if (jsonBean.state == 1000) {
@@ -172,17 +183,20 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
             et_enterprise.visibility = View.VISIBLE
         }
         fl_became_other.setOnClickListener {
+            dialog.show(supportFragmentManager)
             OkHttpUtils.postEnqueue(SharedPrefsUtils.getServiceUrl(this) + "/users/regOther",
                 GsonUtils.gson2Json(user),
                 object : OkHttpUtils.OkHttpCallback {
                     override fun failed(call: Call, e: IOException) {
                         runOnUiThread {
+                            dialog.dismiss()
                             ToastUtils.showShort("请稍后重试!")
                         }
                     }
 
                     override fun success(call: Call, json: String) {
                         runOnUiThread {
+                            dialog.dismiss()
                             val jsonBean = GsonUtils.json2Gson(json,
                                 object : TypeToken<JsonBean<User>>() {})
                             if (jsonBean.state == 1000) {

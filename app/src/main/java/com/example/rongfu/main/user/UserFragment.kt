@@ -19,6 +19,7 @@ import com.example.rongfu.utils.ToastUtils
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_user.*
 import kotlinx.android.synthetic.main.fragment_user.et_username
+import kotlinx.android.synthetic.main.item_step.*
 import okhttp3.Call
 import java.io.IOException
 
@@ -47,6 +48,8 @@ class UserFragment : BaseFragment(), UserContract.View {
     override fun initView() {
         user = GsonUtils.json2Gson(SharedPrefsUtils.getString(context, "user", ""),
             object : TypeToken<User>() {})
+        user?:return
+        tv_username.text=user!!.userName
     }
 
     override fun initLogic() {
@@ -59,7 +62,12 @@ class UserFragment : BaseFragment(), UserContract.View {
             et_email.setText(user!!.email)
         }
         tv_setting.setOnClickListener {
-            startActivity(Intent(activity!!, ServiceUrlActivity::class.java))
+            startActivity(
+                Intent(activity!!, ServiceUrlActivity::class.java).putExtra(
+                    "this",
+                    "main"
+                )
+            )
         }
         tv_cancel.setOnClickListener {
             tv_return.visibility = View.VISIBLE
@@ -86,7 +94,7 @@ class UserFragment : BaseFragment(), UserContract.View {
             val password1 = et_password1.text.toString()
             val password2 = et_password2.text.toString()
             if (!password0.isNullOrEmpty() || !password1.isNullOrEmpty() || !password2.isNullOrEmpty()) {
-                Log.i("UserFragment",password0+" "+password1+" "+password2)
+                Log.i("UserFragment", password0 + " " + password1 + " " + password2)
                 if (password0.isNullOrEmpty()) {
                     ToastUtils.showShort("原始密码不能为空！")
                     return@setOnClickListener

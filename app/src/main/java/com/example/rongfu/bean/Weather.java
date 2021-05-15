@@ -3,15 +3,16 @@ package com.example.rongfu.bean;
 import java.util.List;
 
 public class Weather {
+
     /**
-     * cityid : 101040100
-     * city : 重庆
-     * cityEn : chongqing
+     * cityid : 101180201
+     * city : 安阳
+     * cityEn : anyang
      * country : 中国
      * countryEn : China
-     * update_time : 2021-03-04 00:04:06
-     * data : [{"day":"04日（星期四）","date":"2021-03-04","week":"星期四","wea":"阴转多云","wea_img":"yun","wea_day":"阴","wea_day_img":"yin","wea_night":"多云","wea_night_img":"yun","tem":"10","tem1":"15","tem2":"8","humidity":"85%","visibility":"5.2km","pressure":"990","win":["南风","东北风"],"win_speed":"<3级","win_meter":"小于12km/h","sunrise":"07:17","sunset":"18:54","air":"53","air_level":"良","air_tips":"空气好，可以外出活动，除极少数对污染物特别敏感的人群以外，对公众没有危害！","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"20时","wea":"晴","wea_img":"qing","tem":"13","win":"东北风","win_speed":"<3级"},{"hours":"21时","wea":"多云","wea_img":"yun","tem":"12","win":"东北风","win_speed":"<3级"},{"hours":"22时","wea":"多云","wea_img":"yun","tem":"11","win":"东北风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"00时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"01时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"02时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"03时","wea":"多云","wea_img":"yun","tem":"8","win":"东风","win_speed":"<3级"},{"hours":"04时","wea":"多云","wea_img":"yun","tem":"8","win":"东风","win_speed":"<3级"},{"hours":"05时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"},{"hours":"06时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"},{"hours":"07时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"三颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"较不宜","desc":"路面有积水，车子易被溅上泥水。"},{"title":"空气污染扩散指数","level":"较差","desc":"气象条件较不利于空气污染物扩散。。"}]},{"day":"05日（星期五）","date":"2021-03-05","week":"星期五","wea":"多云转小雨","wea_img":"yun","wea_day":"多云","wea_day_img":"yun","wea_night":"小雨","wea_night_img":"yu","tem":"17","tem1":"17","tem2":"8","humidity":"","visibility":"","pressure":"","win":["东北风","无持续风向"],"win_speed":"<3级","win_meter":"","sunrise":"07:16","sunset":"18:54","air":"67","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"},{"hours":"09时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"10时","wea":"多云","wea_img":"yun","tem":"11","win":"东北风","win_speed":"<3级"},{"hours":"11时","wea":"多云","wea_img":"yun","tem":"12","win":"东北风","win_speed":"<3级"},{"hours":"12时","wea":"多云","wea_img":"yun","tem":"13","win":"东北风","win_speed":"<3级"},{"hours":"13时","wea":"多云","wea_img":"yun","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"14时","wea":"多云","wea_img":"yun","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"15时","wea":"多云","wea_img":"yun","tem":"16","win":"东北风","win_speed":"<3级"},{"hours":"16时","wea":"多云","wea_img":"yun","tem":"16","win":"东北风","win_speed":"<3级"},{"hours":"17时","wea":"多云","wea_img":"yun","tem":"16","win":"东北风","win_speed":"<3级"},{"hours":"18时","wea":"多云","wea_img":"yun","tem":"16","win":"东北风","win_speed":"<3级"},{"hours":"19时","wea":"多云","wea_img":"yun","tem":"16","win":"东北风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"21时","wea":"阴","wea_img":"yin","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"22时","wea":"阴","wea_img":"yin","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"23时","wea":"阴","wea_img":"yin","tem":"13","win":"无持续风向","win_speed":"<3级"},{"hours":"00时","wea":"小雨","wea_img":"yu","tem":"13","win":"西北风","win_speed":"3-4级"},{"hours":"01时","wea":"小雨","wea_img":"yu","tem":"12","win":"西北风","win_speed":"<3级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"12","win":"无持续风向","win_speed":"<3级"},{"hours":"03时","wea":"小雨","wea_img":"yu","tem":"12","win":"西风","win_speed":"<3级"},{"hours":"04时","wea":"小雨","wea_img":"yu","tem":"12","win":"西风","win_speed":"<3级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"11","win":"无持续风向","win_speed":"<3级"},{"hours":"06时","wea":"小雨","wea_img":"yu","tem":"11","win":"西风","win_speed":"<3级"},{"hours":"07时","wea":"小雨","wea_img":"yu","tem":"11","win":"西风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"弱","desc":"辐射较弱，涂擦SPF12-15、PA+护肤品。"},{"title":"减肥指数","level":"三颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"中","desc":"易感人群应适当减少室外活动。"}]},{"day":"06日（星期六）","date":"2021-03-06","week":"星期六","wea":"阴转小雨","wea_img":"yu","wea_day":"阴","wea_day_img":"yin","wea_night":"小雨","wea_night_img":"yu","tem":"15","tem1":"15","tem2":"11","humidity":"","visibility":"","pressure":"","win":["东南风","西风"],"win_speed":"<3级","win_meter":"","sunrise":"07:14","sunset":"18:55","air":"73","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"小雨","wea_img":"yu","tem":"11","win":"无持续风向","win_speed":"<3级"},{"hours":"09时","wea":"阴","wea_img":"yin","tem":"11","win":"西南风","win_speed":"<3级"},{"hours":"10时","wea":"阴","wea_img":"yin","tem":"11","win":"西南风","win_speed":"<3级"},{"hours":"11时","wea":"阴","wea_img":"yin","tem":"12","win":"东南风","win_speed":"<3级"},{"hours":"12时","wea":"阴","wea_img":"yin","tem":"12","win":"南风","win_speed":"<3级"},{"hours":"13时","wea":"阴","wea_img":"yin","tem":"13","win":"西南风","win_speed":"<3级"},{"hours":"14时","wea":"阴","wea_img":"yin","tem":"13","win":"东南风","win_speed":"<3级"},{"hours":"15时","wea":"阴","wea_img":"yin","tem":"14","win":"西南风","win_speed":"<3级"},{"hours":"16时","wea":"阴","wea_img":"yin","tem":"14","win":"西南风","win_speed":"<3级"},{"hours":"17时","wea":"阴","wea_img":"yin","tem":"14","win":"东南风","win_speed":"<3级"},{"hours":"18时","wea":"阴","wea_img":"yin","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"19时","wea":"阴","wea_img":"yin","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"12","win":"东南风","win_speed":"<3级"},{"hours":"21时","wea":"多云","wea_img":"yun","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"22时","wea":"多云","wea_img":"yun","tem":"13","win":"东南风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"00时","wea":"多云","wea_img":"yun","tem":"13","win":"西北风","win_speed":"<3级"},{"hours":"01时","wea":"多云","wea_img":"yun","tem":"13","win":"西北风","win_speed":"<3级"},{"hours":"02时","wea":"阴","wea_img":"yin","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"03时","wea":"阴","wea_img":"yin","tem":"12","win":"西北风","win_speed":"<3级"},{"hours":"04时","wea":"小雨","wea_img":"yu","tem":"12","win":"西北风","win_speed":"<3级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"12","win":"西风","win_speed":"<3级"},{"hours":"06时","wea":"小雨","wea_img":"yu","tem":"12","win":"西风","win_speed":"<3级"},{"hours":"07时","wea":"小雨","wea_img":"yu","tem":"12","win":"西风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"三颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"较差","desc":"气象条件较不利于空气污染物扩散。。"}]},{"day":"07日（星期日）","date":"2021-03-07","week":"星期日","wea":"小雨","wea_img":"yu","wea_day":"小雨","wea_day_img":"yu","wea_night":"小雨","wea_night_img":"yu","tem":"15","tem1":"15","tem2":"12","humidity":"","visibility":"","pressure":"","win":["东风","东风"],"win_speed":"<3级","win_meter":"","sunrise":"07:13","sunset":"18:56","air":"59","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"阴","wea_img":"yin","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"09时","wea":"小雨","wea_img":"yu","tem":"13","win":"西风","win_speed":"<3级"},{"hours":"10时","wea":"小雨","wea_img":"yu","tem":"14","win":"西南风","win_speed":"<3级"},{"hours":"11时","wea":"小雨","wea_img":"yu","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"12时","wea":"小雨","wea_img":"yu","tem":"14","win":"西南风","win_speed":"<3级"},{"hours":"13时","wea":"小雨","wea_img":"yu","tem":"15","win":"西南风","win_speed":"<3级"},{"hours":"14时","wea":"小雨","wea_img":"yu","tem":"15","win":"东风","win_speed":"<3级"},{"hours":"15时","wea":"小雨","wea_img":"yu","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"16时","wea":"小雨","wea_img":"yu","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"17时","wea":"小雨","wea_img":"yu","tem":"15","win":"东风","win_speed":"<3级"},{"hours":"18时","wea":"小雨","wea_img":"yu","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"19时","wea":"小雨","wea_img":"yu","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"20时","wea":"小雨","wea_img":"yu","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"23时","wea":"小雨","wea_img":"yu","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"12","win":"东风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"春天快来了，雨天坚持室内运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件不易引起血糖波动。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]},{"day":"08日（星期一）","date":"2021-03-08","week":"星期一","wea":"阴转小雨","wea_img":"yu","wea_day":"阴","wea_day_img":"yin","wea_night":"小雨","wea_night_img":"yu","tem":"15","tem1":"15","tem2":"12","humidity":"","visibility":"","pressure":"","win":["东风","东北风"],"win_speed":"<3级","win_meter":"","sunrise":"07:12","sunset":"18:56","air":"52","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"小雨","wea_img":"yu","tem":"12","win":"东风","win_speed":"<3级"},{"hours":"11时","wea":"阴","wea_img":"yin","tem":"15","win":"东风","win_speed":"<3级"},{"hours":"14时","wea":"阴","wea_img":"yin","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"17时","wea":"阴","wea_img":"yin","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"12","win":"东风","win_speed":"<3级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"12","win":"东北风","win_speed":"<3级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"12","win":"东风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"三颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"较差","desc":"气象条件较不利于空气污染物扩散。。"}]},{"day":"09日（星期二）","date":"2021-03-09","week":"星期二","wea":"多云","wea_img":"yun","wea_day":"多云","wea_day_img":"yun","wea_night":"多云","wea_night_img":"yun","tem":"18","tem1":"18","tem2":"12","humidity":"","visibility":"","pressure":"","win":["东风","东风"],"win_speed":"<3级","win_meter":"","sunrise":"07:11","sunset":"18:57","air":"55","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"小雨","wea_img":"yu","tem":"12","win":"东北风","win_speed":"<3级"},{"hours":"11时","wea":"多云","wea_img":"yun","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"14时","wea":"多云","wea_img":"yun","tem":"16","win":"东风","win_speed":"<3级"},{"hours":"17时","wea":"多云","wea_img":"yun","tem":"18","win":"东风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"15","win":"东风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"14","win":"东风","win_speed":"<3级"},{"hours":"02时","wea":"多云","wea_img":"yun","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"05时","wea":"多云","wea_img":"yun","tem":"13","win":"东风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"强","desc":"涂擦SPF大于15、PA+防晒护肤品。"},{"title":"减肥指数","level":"五颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较舒适","desc":"建议穿薄外套或牛仔裤等服装。"},{"title":"洗车指数","level":"较适宜","desc":"无雨且风力较小，易保持清洁度。"},{"title":"空气污染扩散指数","level":"中","desc":"易感人群应适当减少室外活动。"}]},{"day":"10日（星期三）","date":"2021-03-10","week":"星期三","wea":"小雨","wea_img":"yu","wea_day":"小雨","wea_day_img":"yu","wea_night":"小雨","wea_night_img":"yu","tem":"15","tem1":"15","tem2":"13","humidity":"","visibility":"","pressure":"","win":["东北风","东北风"],"win_speed":"<3级","win_meter":"","sunrise":"07:10","sunset":"18:58","air":"44","air_level":"优","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"多云","wea_img":"yun","tem":"13","win":"东风","win_speed":"<3级"},{"hours":"11时","wea":"小雨","wea_img":"yu","tem":"15","win":"东风","win_speed":"<3级"},{"hours":"14时","wea":"小雨","wea_img":"yu","tem":"15","win":"东北风","win_speed":"<3级"},{"hours":"17时","wea":"小雨","wea_img":"yu","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"20时","wea":"阴","wea_img":"yin","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"23时","wea":"小雨","wea_img":"yu","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"13","win":"东北风","win_speed":"<3级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"13","win":"东北风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"春天快来了，雨天坚持室内运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件不易引起血糖波动。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]}]
-     * aqi : {"update_time":"22:59","cityid":"101040100","city":"重庆","cityEn":"chongqing","country":"中国","countryEn":"China","air":"53","air_level":"良","air_tips":"空气好，可以外出活动，除极少数对污染物特别敏感的人群以外，对公众没有危害！","pm25":"30","pm25_desc":"优","pm10":"56","pm10_desc":"良","o3":"18","o3_desc":"优","no2":"49","no2_desc":"优","so2":"5","so2_desc":"优","co":"1","co_desc":"优","kouzhao":"不用佩戴口罩","yundong":"适宜运动","waichu":"适宜外出","kaichuang":"适宜开窗","jinghuaqi":"关闭净化器"}
+     * update_time : 2021-05-16 00:25:54
+     * data : [{"day":"16日（星期日）","date":"2021-05-16","week":"星期日","wea":"小雨","wea_img":"yu","wea_day":"小雨","wea_day_img":"yu","wea_night":"小雨","wea_night_img":"yu","tem":"12","tem1":"22","tem2":"13","humidity":"97%","visibility":"2km","pressure":"989","win":["北风","北风"],"win_speed":"3-4级转4-5级","win_meter":"8km/h","sunrise":"05:16","sunset":"19:21","air":"25","air_level":"优","air_tips":"空气很好，可以外出活动，呼吸新鲜空气，拥抱大自然！","alarm":{"alarm_type":"大风","alarm_level":"黄色","alarm_content":"安阳市气象台2021年5月15日22时35分升级发布大风黄色预警信号：安阳部分地区已出现9级以上阵风，预计未来12小时内安阳全市仍将受偏北大风影响，平均风力5～6级，局部地区阵风9级以上,请注意防范。（预警信息来源：国家预警信息发布中心）"},"hours":[{"hours":"20时","wea":"中雨","wea_img":"yu","tem":"14","win":"北风","win_speed":"4-5级"},{"hours":"21时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"22时","wea":"小雨","wea_img":"yu","tem":"17","win":"北风","win_speed":"3-4级"},{"hours":"23时","wea":"小雨","wea_img":"yu","tem":"18","win":"北风","win_speed":"<3级"},{"hours":"00时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"<3级"},{"hours":"01时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"03时","wea":"小雨","wea_img":"yu","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"04时","wea":"小雨","wea_img":"yu","tem":"14","win":"东南风","win_speed":"3-4级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"14","win":"北风","win_speed":"<3级"},{"hours":"06时","wea":"小雨","wea_img":"yu","tem":"13","win":"东南风","win_speed":"<3级"},{"hours":"07时","wea":"小雨","wea_img":"yu","tem":"13","win":"东北风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"风雨相伴，坚持室内运动吧。"},{"title":"血糖指数","level":"易波动","desc":"风力较大，血糖易波动，注意监测。"},{"title":"穿衣指数","level":"较舒适","desc":"建议穿薄外套或牛仔裤等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]},{"day":"17日（星期一）","date":"2021-05-17","week":"星期一","wea":"小雨转多云","wea_img":"yun","wea_day":"小雨","wea_day_img":"yu","wea_night":"多云","wea_night_img":"yun","tem":"19","tem1":"19","tem2":"10","humidity":"66","visibility":"","pressure":"","win":["北风","西南风"],"win_speed":"4-5级转<3级","win_meter":"","sunrise":"05:15","sunset":"19:22","air":"45","air_level":"优","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"小雨","wea_img":"yu","tem":"13","win":"北风","win_speed":"<3级"},{"hours":"09时","wea":"小雨","wea_img":"yu","tem":"13","win":"西南风","win_speed":"<3级"},{"hours":"10时","wea":"小雨","wea_img":"yu","tem":"13","win":"西北风","win_speed":"<3级"},{"hours":"11时","wea":"小雨","wea_img":"yu","tem":"13","win":"北风","win_speed":"<3级"},{"hours":"12时","wea":"阴","wea_img":"yin","tem":"15","win":"西北风","win_speed":"<3级"},{"hours":"13时","wea":"阴","wea_img":"yin","tem":"16","win":"西南风","win_speed":"<3级"},{"hours":"14时","wea":"阴","wea_img":"yin","tem":"17","win":"北风","win_speed":"<3级"},{"hours":"15时","wea":"多云","wea_img":"yun","tem":"17","win":"南风","win_speed":"<3级"},{"hours":"16时","wea":"多云","wea_img":"yun","tem":"18","win":"南风","win_speed":"<3级"},{"hours":"17时","wea":"多云","wea_img":"yun","tem":"18","win":"北风","win_speed":"<3级"},{"hours":"18时","wea":"多云","wea_img":"yun","tem":"18","win":"南风","win_speed":"<3级"},{"hours":"19时","wea":"多云","wea_img":"yun","tem":"18","win":"西风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"17","win":"西北风","win_speed":"<3级"},{"hours":"21时","wea":"多云","wea_img":"yun","tem":"16","win":"西北风","win_speed":"<3级"},{"hours":"22时","wea":"多云","wea_img":"yun","tem":"15","win":"西北风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"14","win":"西风","win_speed":"<3级"},{"hours":"00时","wea":"多云","wea_img":"yun","tem":"13","win":"西南风","win_speed":"<3级"},{"hours":"01时","wea":"多云","wea_img":"yun","tem":"12","win":"西南风","win_speed":"<3级"},{"hours":"02时","wea":"多云","wea_img":"yun","tem":"11","win":"西北风","win_speed":"<3级"},{"hours":"03时","wea":"多云","wea_img":"yun","tem":"11","win":"西南风","win_speed":"<3级"},{"hours":"04时","wea":"多云","wea_img":"yun","tem":"11","win":"西南风","win_speed":"<3级"},{"hours":"05时","wea":"多云","wea_img":"yun","tem":"11","win":"西北风","win_speed":"<3级"},{"hours":"06时","wea":"多云","wea_img":"yun","tem":"12","win":"西风","win_speed":"<3级"},{"hours":"07时","wea":"多云","wea_img":"yun","tem":"14","win":"西南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"风雨相伴，坚持室内运动吧。"},{"title":"血糖指数","level":"易波动","desc":"气温多变，血糖易波动，注意监测血糖变化。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]},{"day":"18日（星期二）","date":"2021-05-18","week":"星期二","wea":"多云","wea_img":"yun","wea_day":"多云","wea_day_img":"yun","wea_night":"多云","wea_night_img":"yun","tem":"26","tem1":"26","tem2":"15","humidity":"36","visibility":"","pressure":"","win":["南风","南风"],"win_speed":"<3级转3-4级","win_meter":"","sunrise":"05:14","sunset":"19:22","air":"52","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"多云","wea_img":"yun","tem":"16","win":"西北风","win_speed":"<3级"},{"hours":"09时","wea":"多云","wea_img":"yun","tem":"18","win":"南风","win_speed":"<3级"},{"hours":"10时","wea":"多云","wea_img":"yun","tem":"20","win":"东南风","win_speed":"<3级"},{"hours":"11时","wea":"多云","wea_img":"yun","tem":"23","win":"东南风","win_speed":"<3级"},{"hours":"12时","wea":"多云","wea_img":"yun","tem":"24","win":"东南风","win_speed":"<3级"},{"hours":"13时","wea":"多云","wea_img":"yun","tem":"25","win":"东南风","win_speed":"<3级"},{"hours":"14时","wea":"晴","wea_img":"qing","tem":"26","win":"东南风","win_speed":"<3级"},{"hours":"15时","wea":"晴","wea_img":"qing","tem":"26","win":"东南风","win_speed":"<3级"},{"hours":"16时","wea":"晴","wea_img":"qing","tem":"26","win":"东南风","win_speed":"<3级"},{"hours":"17时","wea":"晴","wea_img":"qing","tem":"24","win":"东南风","win_speed":"<3级"},{"hours":"18时","wea":"多云","wea_img":"yun","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"19时","wea":"多云","wea_img":"yun","tem":"20","win":"南风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"20","win":"南风","win_speed":"<3级"},{"hours":"21时","wea":"多云","wea_img":"yun","tem":"19","win":"西南风","win_speed":"<3级"},{"hours":"22时","wea":"多云","wea_img":"yun","tem":"19","win":"西南风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"18","win":"西南风","win_speed":"<3级"},{"hours":"00时","wea":"多云","wea_img":"yun","tem":"18","win":"南风","win_speed":"<3级"},{"hours":"01时","wea":"多云","wea_img":"yun","tem":"18","win":"西南风","win_speed":"<3级"},{"hours":"02时","wea":"多云","wea_img":"yun","tem":"18","win":"西南风","win_speed":"<3级"},{"hours":"03时","wea":"多云","wea_img":"yun","tem":"17","win":"西南风","win_speed":"<3级"},{"hours":"04时","wea":"多云","wea_img":"yun","tem":"16","win":"西南风","win_speed":"<3级"},{"hours":"05时","wea":"晴","wea_img":"qing","tem":"15","win":"西南风","win_speed":"<3级"},{"hours":"06时","wea":"晴","wea_img":"qing","tem":"17","win":"西南风","win_speed":"<3级"},{"hours":"07时","wea":"晴","wea_img":"qing","tem":"18","win":"西南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"强","desc":"涂擦SPF大于15、PA+防晒护肤品。"},{"title":"减肥指数","level":"五颗星","desc":"夏天悄然到，肉已无处藏。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"易波动","desc":"气温多变，血糖易波动，请注意监测。"},{"title":"穿衣指数","level":"舒适","desc":"建议穿长袖衬衫单裤等服装。"},{"title":"洗车指数","level":"较适宜","desc":"无雨且风力较小，易保持清洁度。"},{"title":"空气污染扩散指数","level":"中","desc":"易感人群应适当减少室外活动。"}]},{"day":"19日（星期三）","date":"2021-05-19","week":"星期三","wea":"多云转阴","wea_img":"yun","wea_day":"多云","wea_day_img":"yun","wea_night":"阴","wea_night_img":"yin","tem":"29","tem1":"29","tem2":"17","humidity":"37","visibility":"","pressure":"","win":["南风","南风"],"win_speed":"3-4级","win_meter":"","sunrise":"05:14","sunset":"19:23","air":"55","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"晴","wea_img":"qing","tem":"20","win":"西南风","win_speed":"<3级"},{"hours":"09时","wea":"晴","wea_img":"qing","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"10时","wea":"晴","wea_img":"qing","tem":"24","win":"南风","win_speed":"<3级"},{"hours":"11时","wea":"晴","wea_img":"qing","tem":"26","win":"南风","win_speed":"<3级"},{"hours":"12时","wea":"多云","wea_img":"yun","tem":"27","win":"南风","win_speed":"<3级"},{"hours":"13时","wea":"多云","wea_img":"yun","tem":"28","win":"南风","win_speed":"<3级"},{"hours":"14时","wea":"多云","wea_img":"yun","tem":"29","win":"南风","win_speed":"<3级"},{"hours":"15时","wea":"多云","wea_img":"yun","tem":"28","win":"南风","win_speed":"<3级"},{"hours":"16时","wea":"多云","wea_img":"yun","tem":"27","win":"南风","win_speed":"<3级"},{"hours":"17时","wea":"多云","wea_img":"yun","tem":"26","win":"南风","win_speed":"<3级"},{"hours":"18时","wea":"多云","wea_img":"yun","tem":"25","win":"南风","win_speed":"<3级"},{"hours":"19时","wea":"多云","wea_img":"yun","tem":"24","win":"南风","win_speed":"<3级"},{"hours":"20时","wea":"晴","wea_img":"qing","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"20","win":"南风","win_speed":"<3级"},{"hours":"02时","wea":"阴","wea_img":"yin","tem":"19","win":"南风","win_speed":"<3级"},{"hours":"05时","wea":"阴","wea_img":"yin","tem":"19","win":"南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"中等","desc":"涂擦SPF大于15、PA+防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"夏天悄然到，肉已无处藏。风虽有点大，室内可健身。"},{"title":"血糖指数","level":"易波动","desc":"血糖易波动，注意监测。"},{"title":"穿衣指数","level":"热","desc":"适合穿T恤、短薄外套等夏季服装。"},{"title":"洗车指数","level":"较不宜","desc":"风力较大，洗车后会蒙上灰尘。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]},{"day":"20日（星期四）","date":"2021-05-20","week":"星期四","wea":"阴转多云","wea_img":"yun","wea_day":"阴","wea_day_img":"yin","wea_night":"多云","wea_night_img":"yun","tem":"27","tem1":"27","tem2":"16","humidity":"44","visibility":"","pressure":"","win":["南风","南风"],"win_speed":"4-5级转3-4级","win_meter":"","sunrise":"05:13","sunset":"19:24","air":"56","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"阴","wea_img":"yin","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"11时","wea":"阴","wea_img":"yin","tem":"24","win":"南风","win_speed":"<3级"},{"hours":"14时","wea":"阴","wea_img":"yin","tem":"27","win":"南风","win_speed":"<3级"},{"hours":"17时","wea":"阴","wea_img":"yin","tem":"24","win":"南风","win_speed":"<3级"},{"hours":"20时","wea":"多云","wea_img":"yun","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"19","win":"南风","win_speed":"<3级"},{"hours":"02时","wea":"晴","wea_img":"qing","tem":"17","win":"南风","win_speed":"<3级"},{"hours":"05时","wea":"晴","wea_img":"qing","tem":"16","win":"南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"夏天悄然到，肉已无处藏。风虽有点大，室内可健身。"},{"title":"血糖指数","level":"易波动","desc":"风力较大，血糖易波动，注意监测。"},{"title":"穿衣指数","level":"舒适","desc":"建议穿长袖衬衫单裤等服装。"},{"title":"洗车指数","level":"较不宜","desc":"风力较大，洗车后会蒙上灰尘。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]},{"day":"21日（星期五）","date":"2021-05-21","week":"星期五","wea":"晴","wea_img":"qing","wea_day":"晴","wea_day_img":"qing","wea_night":"晴","wea_night_img":"qing","tem":"31","tem1":"31","tem2":"18","humidity":"48","visibility":"","pressure":"","win":["东南风","西风"],"win_speed":"<3级","win_meter":"","sunrise":"05:12","sunset":"19:25","air":"54","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"晴","wea_img":"qing","tem":"20","win":"南风","win_speed":"<3级"},{"hours":"11时","wea":"晴","wea_img":"qing","tem":"25","win":"南风","win_speed":"<3级"},{"hours":"14时","wea":"晴","wea_img":"qing","tem":"30","win":"南风","win_speed":"<3级"},{"hours":"17时","wea":"晴","wea_img":"qing","tem":"28","win":"南风","win_speed":"<3级"},{"hours":"20时","wea":"晴","wea_img":"qing","tem":"26","win":"南风","win_speed":"<3级"},{"hours":"23时","wea":"晴","wea_img":"qing","tem":"22","win":"南风","win_speed":"<3级"},{"hours":"02时","wea":"晴","wea_img":"qing","tem":"19","win":"西南风","win_speed":"<3级"},{"hours":"05时","wea":"晴","wea_img":"qing","tem":"22","win":"西南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"很强","desc":"涂擦SPF20以上，PA++护肤品，避强光。"},{"title":"减肥指数","level":"三颗星","desc":"夏天悄然到，肉已无处藏。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"易波动","desc":"气温多变，血糖易波动，请注意监测。"},{"title":"穿衣指数","level":"炎热","desc":"建议穿短衫、短裤等清凉夏季服装。"},{"title":"洗车指数","level":"适宜","desc":"天气较好，适合擦洗汽车。"},{"title":"空气污染扩散指数","level":"中","desc":"易感人群应适当减少室外活动。"}]},{"day":"22日（星期六）","date":"2021-05-22","week":"星期六","wea":"晴","wea_img":"qing","wea_day":"晴","wea_day_img":"qing","wea_night":"晴","wea_night_img":"qing","tem":"35","tem1":"35","tem2":"18","humidity":"42","visibility":"","pressure":"","win":["南风","西南风"],"win_speed":"<3级","win_meter":"","sunrise":"05:12","sunset":"19:26","air":"56","air_level":"良","air_tips":"","alarm":{"alarm_type":"","alarm_level":"","alarm_content":""},"hours":[{"hours":"08时","wea":"晴","wea_img":"qing","tem":"25","win":"南风","win_speed":"<3级"},{"hours":"11时","wea":"晴","wea_img":"qing","tem":"29","win":"南风","win_speed":"<3级"},{"hours":"14时","wea":"晴","wea_img":"qing","tem":"33","win":"南风","win_speed":"<3级"},{"hours":"17时","wea":"晴","wea_img":"qing","tem":"32","win":"南风","win_speed":"<3级"},{"hours":"20时","wea":"晴","wea_img":"qing","tem":"31","win":"南风","win_speed":"<3级"},{"hours":"23时","wea":"晴","wea_img":"qing","tem":"25","win":"西南风","win_speed":"<3级"},{"hours":"02时","wea":"晴","wea_img":"qing","tem":"19","win":"南风","win_speed":"<3级"},{"hours":"05时","wea":"晴","wea_img":"qing","tem":"21","win":"西南风","win_speed":"<3级"}],"index":[{"title":"紫外线指数","level":"很强","desc":"涂擦SPF20以上，PA++护肤品，避强光。"},{"title":"减肥指数","level":"一颗星","desc":"天气有点热，运动多补水。"},{"title":"血糖指数","level":"易波动","desc":"气温高，血糖易波动，注意防暑降温。"},{"title":"穿衣指数","level":"炎热","desc":"建议穿短衫、短裤等清凉夏季服装。"},{"title":"洗车指数","level":"适宜","desc":"天气较好，适合擦洗汽车。"},{"title":"空气污染扩散指数","level":"中","desc":"易感人群应适当减少室外活动。"}]}]
+     * aqi : {"update_time":"01:00","cityid":"101180201","city":"安阳","cityEn":"anyang","country":"中国","countryEn":"China","air":"22","air_level":"优","air_tips":"空气很好，可以外出活动，呼吸新鲜空气，拥抱大自然！","pm25":"4","pm25_desc":"优","pm10":"5","pm10_desc":"优","o3":"69","o3_desc":"优","no2":"6","no2_desc":"优","so2":"2","so2_desc":"优","co":"1","co_desc":"优","kouzhao":"不用佩戴口罩","yundong":"非常适宜运动","waichu":"适宜外出","kaichuang":"适宜开窗","jinghuaqi":"关闭净化器"}
      */
 
     private String cityid;
@@ -89,29 +90,29 @@ public class Weather {
 
     public static class AqiBean {
         /**
-         * update_time : 22:59
-         * cityid : 101040100
-         * city : 重庆
-         * cityEn : chongqing
+         * update_time : 01:00
+         * cityid : 101180201
+         * city : 安阳
+         * cityEn : anyang
          * country : 中国
          * countryEn : China
-         * air : 53
-         * air_level : 良
-         * air_tips : 空气好，可以外出活动，除极少数对污染物特别敏感的人群以外，对公众没有危害！
-         * pm25 : 30
+         * air : 22
+         * air_level : 优
+         * air_tips : 空气很好，可以外出活动，呼吸新鲜空气，拥抱大自然！
+         * pm25 : 4
          * pm25_desc : 优
-         * pm10 : 56
-         * pm10_desc : 良
-         * o3 : 18
+         * pm10 : 5
+         * pm10_desc : 优
+         * o3 : 69
          * o3_desc : 优
-         * no2 : 49
+         * no2 : 6
          * no2_desc : 优
-         * so2 : 5
+         * so2 : 2
          * so2_desc : 优
          * co : 1
          * co_desc : 优
          * kouzhao : 不用佩戴口罩
-         * yundong : 适宜运动
+         * yundong : 非常适宜运动
          * waichu : 适宜外出
          * kaichuang : 适宜开窗
          * jinghuaqi : 关闭净化器
@@ -351,68 +352,36 @@ public class Weather {
         public void setJinghuaqi(String jinghuaqi) {
             this.jinghuaqi = jinghuaqi;
         }
-
-        @Override
-        public String toString() {
-            return "AqiBean{" +
-                    "update_time='" + update_time + '\'' +
-                    ", cityid='" + cityid + '\'' +
-                    ", city='" + city + '\'' +
-                    ", cityEn='" + cityEn + '\'' +
-                    ", country='" + country + '\'' +
-                    ", countryEn='" + countryEn + '\'' +
-                    ", air='" + air + '\'' +
-                    ", air_level='" + air_level + '\'' +
-                    ", air_tips='" + air_tips + '\'' +
-                    ", pm25='" + pm25 + '\'' +
-                    ", pm25_desc='" + pm25_desc + '\'' +
-                    ", pm10='" + pm10 + '\'' +
-                    ", pm10_desc='" + pm10_desc + '\'' +
-                    ", o3='" + o3 + '\'' +
-                    ", o3_desc='" + o3_desc + '\'' +
-                    ", no2='" + no2 + '\'' +
-                    ", no2_desc='" + no2_desc + '\'' +
-                    ", so2='" + so2 + '\'' +
-                    ", so2_desc='" + so2_desc + '\'' +
-                    ", co='" + co + '\'' +
-                    ", co_desc='" + co_desc + '\'' +
-                    ", kouzhao='" + kouzhao + '\'' +
-                    ", yundong='" + yundong + '\'' +
-                    ", waichu='" + waichu + '\'' +
-                    ", kaichuang='" + kaichuang + '\'' +
-                    ", jinghuaqi='" + jinghuaqi + '\'' +
-                    '}';
-        }
     }
 
     public static class DataBean {
         /**
-         * day : 04日（星期四）
-         * date : 2021-03-04
-         * week : 星期四
-         * wea : 阴转多云
-         * wea_img : yun
-         * wea_day : 阴
-         * wea_day_img : yin
-         * wea_night : 多云
-         * wea_night_img : yun
-         * tem : 10
-         * tem1 : 15
-         * tem2 : 8
-         * humidity : 85%
-         * visibility : 5.2km
-         * pressure : 990
-         * win : ["南风","东北风"]
-         * win_speed : <3级
-         * win_meter : 小于12km/h
-         * sunrise : 07:17
-         * sunset : 18:54
-         * air : 53
-         * air_level : 良
-         * air_tips : 空气好，可以外出活动，除极少数对污染物特别敏感的人群以外，对公众没有危害！
-         * alarm : {"alarm_type":"","alarm_level":"","alarm_content":""}
-         * hours : [{"hours":"20时","wea":"晴","wea_img":"qing","tem":"13","win":"东北风","win_speed":"<3级"},{"hours":"21时","wea":"多云","wea_img":"yun","tem":"12","win":"东北风","win_speed":"<3级"},{"hours":"22时","wea":"多云","wea_img":"yun","tem":"11","win":"东北风","win_speed":"<3级"},{"hours":"23时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"00时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"01时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"02时","wea":"多云","wea_img":"yun","tem":"9","win":"东北风","win_speed":"<3级"},{"hours":"03时","wea":"多云","wea_img":"yun","tem":"8","win":"东风","win_speed":"<3级"},{"hours":"04时","wea":"多云","wea_img":"yun","tem":"8","win":"东风","win_speed":"<3级"},{"hours":"05时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"},{"hours":"06时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"},{"hours":"07时","wea":"多云","wea_img":"yun","tem":"8","win":"东北风","win_speed":"<3级"}]
-         * index : [{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"三颗星","desc":"春天不减肥，夏天徒伤悲。天气较舒适，快去运动吧。"},{"title":"血糖指数","level":"不易波动","desc":"天气条件好，血糖不易波动，可适时进行户外锻炼。"},{"title":"穿衣指数","level":"较冷","desc":"建议着厚外套加毛衣等服装。"},{"title":"洗车指数","level":"较不宜","desc":"路面有积水，车子易被溅上泥水。"},{"title":"空气污染扩散指数","level":"较差","desc":"气象条件较不利于空气污染物扩散。。"}]
+         * day : 16日（星期日）
+         * date : 2021-05-16
+         * week : 星期日
+         * wea : 小雨
+         * wea_img : yu
+         * wea_day : 小雨
+         * wea_day_img : yu
+         * wea_night : 小雨
+         * wea_night_img : yu
+         * tem : 12
+         * tem1 : 22
+         * tem2 : 13
+         * humidity : 97%
+         * visibility : 2km
+         * pressure : 989
+         * win : ["北风","北风"]
+         * win_speed : 3-4级转4-5级
+         * win_meter : 8km/h
+         * sunrise : 05:16
+         * sunset : 19:21
+         * air : 25
+         * air_level : 优
+         * air_tips : 空气很好，可以外出活动，呼吸新鲜空气，拥抱大自然！
+         * alarm : {"alarm_type":"大风","alarm_level":"黄色","alarm_content":"安阳市气象台2021年5月15日22时35分升级发布大风黄色预警信号：安阳部分地区已出现9级以上阵风，预计未来12小时内安阳全市仍将受偏北大风影响，平均风力5～6级，局部地区阵风9级以上,请注意防范。（预警信息来源：国家预警信息发布中心）"}
+         * hours : [{"hours":"20时","wea":"中雨","wea_img":"yu","tem":"14","win":"北风","win_speed":"4-5级"},{"hours":"21时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"22时","wea":"小雨","wea_img":"yu","tem":"17","win":"北风","win_speed":"3-4级"},{"hours":"23时","wea":"小雨","wea_img":"yu","tem":"18","win":"北风","win_speed":"<3级"},{"hours":"00时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"<3级"},{"hours":"01时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"02时","wea":"小雨","wea_img":"yu","tem":"16","win":"北风","win_speed":"3-4级"},{"hours":"03时","wea":"小雨","wea_img":"yu","tem":"14","win":"东北风","win_speed":"<3级"},{"hours":"04时","wea":"小雨","wea_img":"yu","tem":"14","win":"东南风","win_speed":"3-4级"},{"hours":"05时","wea":"小雨","wea_img":"yu","tem":"14","win":"北风","win_speed":"<3级"},{"hours":"06时","wea":"小雨","wea_img":"yu","tem":"13","win":"东南风","win_speed":"<3级"},{"hours":"07时","wea":"小雨","wea_img":"yu","tem":"13","win":"东北风","win_speed":"<3级"}]
+         * index : [{"title":"紫外线指数","level":"最弱","desc":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"title":"减肥指数","level":"一颗星","desc":"风雨相伴，坚持室内运动吧。"},{"title":"血糖指数","level":"易波动","desc":"风力较大，血糖易波动，注意监测。"},{"title":"穿衣指数","level":"较舒适","desc":"建议穿薄外套或牛仔裤等服装。"},{"title":"洗车指数","level":"不宜","desc":"有雨，雨水和泥水会弄脏爱车。"},{"title":"空气污染扩散指数","level":"良","desc":"气象条件有利于空气污染物扩散。"}]
          */
 
         private String day;
@@ -650,43 +619,11 @@ public class Weather {
             this.index = index;
         }
 
-        @Override
-        public String toString() {
-            return "DataBean{" +
-                    "day='" + day + '\'' +
-                    ", date='" + date + '\'' +
-                    ", week='" + week + '\'' +
-                    ", wea='" + wea + '\'' +
-                    ", wea_img='" + wea_img + '\'' +
-                    ", wea_day='" + wea_day + '\'' +
-                    ", wea_day_img='" + wea_day_img + '\'' +
-                    ", wea_night='" + wea_night + '\'' +
-                    ", wea_night_img='" + wea_night_img + '\'' +
-                    ", tem='" + tem + '\'' +
-                    ", tem1='" + tem1 + '\'' +
-                    ", tem2='" + tem2 + '\'' +
-                    ", humidity='" + humidity + '\'' +
-                    ", visibility='" + visibility + '\'' +
-                    ", pressure='" + pressure + '\'' +
-                    ", win_speed='" + win_speed + '\'' +
-                    ", win_meter='" + win_meter + '\'' +
-                    ", sunrise='" + sunrise + '\'' +
-                    ", sunset='" + sunset + '\'' +
-                    ", air='" + air + '\'' +
-                    ", air_level='" + air_level + '\'' +
-                    ", air_tips='" + air_tips + '\'' +
-                    ", alarm=" + alarm +
-                    ", win=" + win +
-                    ", hours=" + hours +
-                    ", index=" + index +
-                    '}';
-        }
-
         public static class AlarmBean {
             /**
-             * alarm_type :
-             * alarm_level :
-             * alarm_content :
+             * alarm_type : 大风
+             * alarm_level : 黄色
+             * alarm_content : 安阳市气象台2021年5月15日22时35分升级发布大风黄色预警信号：安阳部分地区已出现9级以上阵风，预计未来12小时内安阳全市仍将受偏北大风影响，平均风力5～6级，局部地区阵风9级以上,请注意防范。（预警信息来源：国家预警信息发布中心）
              */
 
             private String alarm_type;
@@ -716,25 +653,16 @@ public class Weather {
             public void setAlarm_content(String alarm_content) {
                 this.alarm_content = alarm_content;
             }
-
-            @Override
-            public String toString() {
-                return "AlarmBean{" +
-                        "alarm_type='" + alarm_type + '\'' +
-                        ", alarm_level='" + alarm_level + '\'' +
-                        ", alarm_content='" + alarm_content + '\'' +
-                        '}';
-            }
         }
 
         public static class HoursBean {
             /**
              * hours : 20时
-             * wea : 晴
-             * wea_img : qing
-             * tem : 13
-             * win : 东北风
-             * win_speed : <3级
+             * wea : 中雨
+             * wea_img : yu
+             * tem : 14
+             * win : 北风
+             * win_speed : 4-5级
              */
 
             private String hours;
@@ -791,18 +719,6 @@ public class Weather {
             public void setWin_speed(String win_speed) {
                 this.win_speed = win_speed;
             }
-
-            @Override
-            public String toString() {
-                return "HoursBean{" +
-                        "hours='" + hours + '\'' +
-                        ", wea='" + wea + '\'' +
-                        ", wea_img='" + wea_img + '\'' +
-                        ", tem='" + tem + '\'' +
-                        ", win='" + win + '\'' +
-                        ", win_speed='" + win_speed + '\'' +
-                        '}';
-            }
         }
 
         public static class IndexBean {
@@ -839,29 +755,6 @@ public class Weather {
             public void setDesc(String desc) {
                 this.desc = desc;
             }
-
-            @Override
-            public String toString() {
-                return "IndexBean{" +
-                        "title='" + title + '\'' +
-                        ", level='" + level + '\'' +
-                        ", desc='" + desc + '\'' +
-                        '}';
-            }
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Weather{" +
-                "cityid='" + cityid + '\'' +
-                ", city='" + city + '\'' +
-                ", cityEn='" + cityEn + '\'' +
-                ", country='" + country + '\'' +
-                ", countryEn='" + countryEn + '\'' +
-                ", update_time='" + update_time + '\'' +
-                ", aqi=" + aqi +
-                ", data=" + data +
-                '}';
     }
 }
