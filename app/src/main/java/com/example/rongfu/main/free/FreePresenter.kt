@@ -1,4 +1,4 @@
-package com.example.rongfu.free
+package com.example.rongfu.main.free
 
 class FreePresenter(private val pageView: FreeContract.View) : FreeContract.Presenter {
 

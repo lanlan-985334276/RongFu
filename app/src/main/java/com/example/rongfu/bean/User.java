@@ -1,9 +1,10 @@
 package com.example.rongfu.bean;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class User {
+public class User implements Serializable {
     private int userId;
     /**
      * 用户名
@@ -37,19 +38,6 @@ public class User {
      * 账号状态 0:离线 1:在线 2:注销
      */
     private int status;
-    /**
-     * 身份证号
-     */
-    private String idNumber;
-    /**
-     * 籍贯
-     */
-    private String nativePlace;
-
-    /**
-     * 住址
-     */
-    private String address;
 
     private boolean isAdmin;
 
@@ -59,12 +47,30 @@ public class User {
 
     private int adminId;
     private int staffId;
+    private int enterpriseId;
 
     private int state;
 
+    /**
+     * 修改个人资料  新密码
+     */
+    private String password1;
+    private String password0;
+    /**
+     * 用于验证码登录
+     */
     private String code;
 
     private String epName;
+
+
+    public int getEnterpriseId() {
+        return enterpriseId;
+    }
+
+    public void setEnterpriseId(int enterpriseId) {
+        this.enterpriseId = enterpriseId;
+    }
 
     public String getEpName() {
         return epName;
@@ -83,6 +89,14 @@ public class User {
     }
 
     public User() {
+    }
+
+    public String getPassword0() {
+        return password0;
+    }
+
+    public void setPassword0(String password0) {
+        this.password0 = password0;
     }
 
     public int getState() {
@@ -173,30 +187,6 @@ public class User {
         this.status = status;
     }
 
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
-    }
-
-    public String getNativePlace() {
-        return nativePlace;
-    }
-
-    public void setNativePlace(String nativePlace) {
-        this.nativePlace = nativePlace;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public Timestamp getLastLoginTime() {
         return lastLoginTime;
     }
@@ -229,6 +219,14 @@ public class User {
         this.date = date;
     }
 
+    public String getPassword1() {
+        return password1;
+    }
+
+    public void setPassword1(String password1) {
+        this.password1 = password1;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -241,16 +239,16 @@ public class User {
                 ", email='" + email + '\'' +
                 ", lastLoginTime=" + lastLoginTime +
                 ", status=" + status +
-                ", idNumber='" + idNumber + '\'' +
-                ", nativePlace='" + nativePlace + '\'' +
-                ", address='" + address + '\'' +
                 ", isAdmin=" + isAdmin +
                 ", isEnterprise=" + isEnterprise +
                 ", date=" + date +
                 ", adminId=" + adminId +
                 ", staffId=" + staffId +
+                ", enterpriseId=" + enterpriseId +
                 ", state=" + state +
+                ", password1='" + password1 + '\'' +
                 ", code='" + code + '\'' +
+                ", eqName='" + epName + '\'' +
                 '}';
     }
 }

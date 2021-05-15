@@ -14,4 +14,8 @@ object GsonUtils {
         val gson = GsonBuilder().setDateFormat("YYYY-MM-DD hh:mm:ss").create()
         return gson.toJson(obj)
     }
+    fun <T> json2Gson(json: String,typeToken: TypeToken<T>):T{
+        val gson = GsonBuilder().setDateFormat("YYYY-MM-DD hh:mm:ss").create()
+        return gson.fromJson(json, typeToken.type)
+    }
 }

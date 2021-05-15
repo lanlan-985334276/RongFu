@@ -8,31 +8,15 @@ public class Plan {
     private String title;
     private String content;
     private Timestamp addTime;
-    private String staffs;
     private String progress;
     private int epId;
     private int userId;
+    private String staffs;
+    private String time;
 
-    private int progressNum;
-    private List<User> userList;
+    private List<PlanItem> planItems;
 
     public Plan() {
-    }
-
-    public void setProgressNum(int progressNum) {
-        this.progressNum = progressNum;
-    }
-
-    public int getProgressNum() {
-        return progressNum;
-    }
-
-    public List<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
     }
 
     public int getPlanId() {
@@ -67,14 +51,6 @@ public class Plan {
         this.addTime = addTime;
     }
 
-    public String getStaffs() {
-        return staffs;
-    }
-
-    public void setStaffs(String staffs) {
-        this.staffs = staffs;
-    }
-
     public String getProgress() {
         return progress;
     }
@@ -99,6 +75,30 @@ public class Plan {
         this.userId = userId;
     }
 
+    public List<PlanItem> getPlanItems() {
+        return planItems;
+    }
+
+    public void setPlanItems(List<PlanItem> planItems) {
+        this.planItems = planItems;
+    }
+
+    public String getStaffs() {
+        return staffs;
+    }
+
+    public void setStaffs(String staffs) {
+        this.staffs = staffs;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     @Override
     public String toString() {
         return "Plan{" +
@@ -106,12 +106,12 @@ public class Plan {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", addTime=" + addTime +
-                ", staffs='" + staffs + '\'' +
                 ", progress='" + progress + '\'' +
                 ", epId=" + epId +
                 ", userId=" + userId +
-                ", progressNum=" + progressNum +
-                ", userList=" + userList +
+                ", staffs='" + staffs + '\'' +
+                ", time='" + time + '\'' +
+                ", planItems=" + planItems +
                 '}';
     }
 }

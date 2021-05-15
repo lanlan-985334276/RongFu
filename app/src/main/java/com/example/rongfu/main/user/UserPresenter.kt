@@ -1,4 +1,4 @@
-package com.example.rongfu.user
+package com.example.rongfu.main.user
 
 class UserPresenter(private val pageView: UserContract.View) : UserContract.Presenter {
 

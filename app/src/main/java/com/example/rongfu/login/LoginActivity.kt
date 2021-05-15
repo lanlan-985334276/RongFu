@@ -1,11 +1,16 @@
 package com.example.rongfu.login
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.rongfu.R
 import com.example.rongfu.base.page.BaseActivity
 import com.example.rongfu.bean.JsonBean
@@ -34,6 +39,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
         setContentView(R.layout.activity_login)
         LoginPresenter(this).start()
         PermissionUtils.checkSdAndRequestPermission(this)
+        requestPermission()
     }
 
     override fun initView() {
@@ -54,9 +60,6 @@ class LoginActivity : BaseActivity(), LoginContract.View {
                 et_password.visibility = View.GONE
                 tv_use_password.setText(R.string.username_password_login)
             }
-        }
-        tv_forget_password.setOnClickListener {
-
         }
         tv_register.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
@@ -99,7 +102,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
             )
         }
         tv_login.setOnClickListener {
-            val user = User()
+            var user = User()
             user.userName = et_username.text.toString()
             user.code = et_code.text.toString()
             user.password = et_password.text.toString()
@@ -140,6 +143,12 @@ class LoginActivity : BaseActivity(), LoginContract.View {
                                 jsonBean.toString()
                             )
                             if (jsonBean.state == 1000) {
+                                user=jsonBean.data
+                                SharedPrefsUtils.putInt(
+                                    this@LoginActivity,
+                                    "userId",
+                                    user.userId
+                                )
                                 Log.i(TAG, jsonBean.data.toString())
                                 ToastUtils.showShort("登录成功！")
                                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
@@ -155,6 +164,30 @@ class LoginActivity : BaseActivity(), LoginContract.View {
             val intent = Intent(this, ServiceUrlActivity::class.java)
             intent.putExtra("this", "Login")
             startActivity(intent)
+        }
+    }
+
+    private fun requestPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACTIVITY_RECOGNITION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.ACTIVITY_RECOGNITION),
+                    1
+                )
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        this,
+                        Manifest.permission.ACTIVITY_RECOGNITION
+                    )
+                ) {
+                    //此处需要弹窗通知用户去设置权限
+                    ToastUtils.showShort("请允许获取健身运动信息，不然不能为你计步哦~")
+                }
+            }
         }
     }
 }

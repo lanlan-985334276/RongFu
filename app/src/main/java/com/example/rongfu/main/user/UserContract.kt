@@ -1,4 +1,4 @@
-package com.example.rongfu.user
+package com.example.rongfu.main.user
 
 import com.example.rongfu.base.mvp.BasePresenter
 import com.example.rongfu.base.mvp.BaseView

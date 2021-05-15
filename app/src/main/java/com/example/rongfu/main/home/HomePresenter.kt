@@ -1,4 +1,4 @@
-package com.example.rongfu.home
+package com.example.rongfu.main.home
 
 class HomePresenter(private val pageView: HomeContract.View) : HomeContract.Presenter {
 

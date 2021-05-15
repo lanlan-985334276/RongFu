@@ -6,6 +6,8 @@ public class SignIn {
     private int siId;
     private int staffId;
     private Timestamp date;
+    private int epid;
+    private int state=0;
 
     public SignIn() {
     }
@@ -34,12 +36,31 @@ public class SignIn {
         this.date = date;
     }
 
+    public int getEpid() {
+        return epid;
+    }
+
+    public void setEpid(int epid) {
+        this.epid = epid;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+
     @Override
     public String toString() {
         return "SignIn{" +
                 "siId=" + siId +
                 ", staffId=" + staffId +
                 ", date=" + date +
+                ", epid=" + epid +
+                ", state=" + state +
                 '}';
     }
 }

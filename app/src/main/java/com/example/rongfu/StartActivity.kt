@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rongfu.base.page.BaseActivity
 import com.example.rongfu.login.LoginActivity
+import com.example.rongfu.main.MainActivity
 import com.example.rongfu.service_url.ServiceUrlActivity
 import com.example.rongfu.utils.ContextHolder
 import com.example.rongfu.utils.PermissionUtils
@@ -24,10 +25,14 @@ class StartActivity : BaseActivity() {
     private fun start() {
         Handler().postDelayed({
             val url = SharedPrefsUtils.getServiceUrl(this)
+            val userId = SharedPrefsUtils.getInt(this, "userId", 0)
             if (url.isNullOrEmpty()) {
                 startActivity(Intent(this, ServiceUrlActivity::class.java))
-            } else
-                startActivity(Intent(applicationContext, LoginActivity::class.java))
+            } else if (userId == 0)
+                startActivity(Intent(this, LoginActivity::class.java))
+            else {
+                startActivity(Intent(this, MainActivity::class.java))
+            }
             finish()
         }, 1000)
     }

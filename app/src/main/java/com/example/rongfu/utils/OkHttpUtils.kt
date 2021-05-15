@@ -10,31 +10,31 @@ import java.io.IOException
 object OkHttpUtils {
 
     private val okHttpClient = OkHttpClient()
-    private val TAG="OkHttpUtils"
+    private val TAG = "OkHttpUtils"
 
     fun postEnqueue(url: String, json: String, callback: OkHttpCallback) {
         if (NetworkStateUtils.isNetworkConnected(ContextHolder.getContext()))
-        object : Thread() {
-            override fun run() {
-                super.run()
-                okHttpClient.newCall(
-                    Request.Builder().url(url).post(
-                        json.toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
-                    ).build()
-                ).enqueue(object : Callback {
-                    override fun onFailure(call: Call, e: IOException) {
-                        Log.i(TAG,"$TAG==failed==$e")
-                        callback.failed(call, e)
-                    }
+            object : Thread() {
+                override fun run() {
+                    super.run()
+                    okHttpClient.newCall(
+                        Request.Builder().url(url).post(
+                            json.toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
+                        ).build()
+                    ).enqueue(object : Callback {
+                        override fun onFailure(call: Call, e: IOException) {
+                            Log.i(TAG, "$TAG==failed==$e")
+                            callback.failed(call, e)
+                        }
 
-                    override fun onResponse(call: Call, response: Response) {
-                        val str=response.body!!.string()
-                        Log.i(TAG,"$TAG==successful==$str")
-                        callback.success(call, str)
-                    }
-                })
-            }
-        }.start()
+                        override fun onResponse(call: Call, response: Response) {
+                            val str = response.body!!.string()
+                            Log.i(TAG, "$TAG==successful==$str")
+                            callback.success(call, str)
+                        }
+                    })
+                }
+            }.start()
         else ToastUtils.showShort(R.string.network_status)
     }
 
@@ -50,7 +50,7 @@ object OkHttpUtils {
                     }
 
                     override fun onResponse(call: Call, response: Response) {
-                        val json=response.body!!.string()
+                        val json = response.body!!.string()
                         callback.success(call, json)
                     }
                 })
@@ -58,8 +58,29 @@ object OkHttpUtils {
         }.start()
     }
 
+    fun getEnqueue(url: String, callback: OkHttpCallback) {
+        object : Thread() {
+            override fun run() {
+                super.run()
+                okHttpClient.newCall(
+                    Request.Builder().url(url).get().build()
+                ).enqueue(object : Callback {
+                    override fun onFailure(call: Call, e: IOException) {
+                        callback.failed(call, e)
+                    }
+
+                    override fun onResponse(call: Call, response: Response) {
+                        val json = response.body!!.string()
+                        callback.success(call, json)
+                    }
+                })
+            }
+        }.start()
+    }
+
+
     interface OkHttpCallback {
         fun failed(call: Call, e: IOException)
-        fun success(call: Call, json:String)
+        fun success(call: Call, json: String)
     }
 }

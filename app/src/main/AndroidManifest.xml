@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
 
     <application
         android:name=".RongFuApplication"
@@ -38,6 +40,8 @@
         <activity android:name=".service_url.ServiceUrlActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".register.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".main.home.log.LogActivity"
             android:windowSoftInputMode="adjustPan" />
     </application>
 

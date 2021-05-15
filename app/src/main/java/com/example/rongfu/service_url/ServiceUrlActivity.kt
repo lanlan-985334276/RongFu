@@ -29,7 +29,7 @@ class ServiceUrlActivity : BaseActivity(), ServiceUrlContract.View {
     }
 
     override fun initView() {
-
+        et_url.setText(SharedPrefsUtils.getServiceUrl(this))
     }
 
     override fun initLogic() {
